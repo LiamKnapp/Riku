@@ -1,6 +1,6 @@
 Install ollama
 Install the llama3 model ( in cmd after ollama is installed >ollama run llama3)
-Using the ModelFile construct your own "Riku" Ai
+Using the ModelFile construct your own "Riku" Ai see the ollama git repo to learn the commands
 
 install nivida cuda toolkit
 GPU execution requires the following NVIDIA libraries to be installed:
