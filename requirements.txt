@@ -1,0 +1,22 @@
+# Install the required dependencies:
+# FFMPEG
+# nivida cuda toolkit
+# cuBLAS for CUDA 11
+# cuDNN 8 for CUDA 11
+# vTube Studio
+# VB-Audio and Voicemeeter if you want to configure audio
+# PyTorch
+
+#Install The required libraries
+diffusers
+transformers
+accelerate
+scipy
+safetensors
+ollama
+keyboard
+pyaudio
+faster_whisper
+numpy
+torch
+RealtimeTTS

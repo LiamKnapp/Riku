@@ -1,0 +1,30 @@
+Install ollama
+Install the llama3 model ( in cmd after ollama is installed >ollama run llama3)
+Using the ModelFile construct your own "Riku" Ai
+
+install nivida cuda toolkit
+GPU execution requires the following NVIDIA libraries to be installed:
+cuBLAS for CUDA 11
+cuDNN 8 for CUDA 11
+
+Install ffmpeg for text to speech
+The SystemEngine works out of the box using your system's built-in TTS capabilities. No additional setup is needed.
+
+If using Vtube studio avatar, install vtubestudio and configure it enableing api
+Use the VTS Desktop Audio application and configure it so that the animations in vtubestudio work well
+If you are trying to have the output of the AI's voice to not be your default device so that you can prevent noise for vtube studio so the mouth is accurate. Use a virtual audio cable such as VB-Audio. For extra configurations of audio devices use the software Voicemeeter.
+
+Install the required libraries and packages
+
+To run the code use: python app.py
+
+References:
+https://github.com/SYSTRAN/faster-whisper
+https://github.com/ollama/ollama
+https://github.com/KoljaB/AIVoiceChat
+https://github.com/KoljaB/RealtimeTTS
+https://lualucky.itch.io/vts-desktop-audio-plugin
+https://vb-audio.com
+https://voicemeeter.com/?gad_source=1&gclid=CjwKCAjwz42xBhB9EiwA48pT7xGu-Xz0A-K4SwhsPbtFOLoVj2aTquKYkyegJIx48zvcJDGogxIJLRoCqhcQAvD_BwE
+https://denchisoft.com
+https://huggingface.co/stabilityai/stable-diffusion-2-1/tree/main
