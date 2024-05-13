@@ -7,7 +7,7 @@ GPU execution requires the following NVIDIA libraries to be installed:
 cuBLAS for CUDA 11
 cuDNN 8 for CUDA 11
 
-Install ffmpeg for text to speech
+Install ffmpeg for text to speech: https://www.youtube.com/watch?v=jZLqNocSQDM
 The SystemEngine works out of the box using your system's built-in TTS capabilities. No additional setup is needed.
 
 If using Vtube studio avatar, install vtubestudio and configure it enableing api

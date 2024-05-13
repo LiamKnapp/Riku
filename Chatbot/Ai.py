@@ -1,13 +1,11 @@
 import ollama, time, keyboard, json, app
 from datetime import datetime
-from RealtimeTTS import TextToAudioStream, SystemEngine
+from RealtimeTTS import TextToAudioStream
 
 MAX_Memory = 1000 # specify the limit of the short term memory capacity
 context = [] # Saves the response of the users speech and the ais responses
 context_file_path = "./Chatbot/llm_ShortTermMemory.json"
-
 AiModel = "llama3" # Define the Ai model to be used
-TTSEngine = SystemEngine(voice="Zira", print_installed_voices=True) # define the Text to speech engine to be used
 
 # Function to save context to a JSON file
 def save_context_to_json(context):
@@ -74,13 +72,13 @@ def chatbot(prompt: str):
     Ai_response = ({'role': 'assistant', 'content': response}) # Store the Ai's response in the context
     add_item_to_list(Ai_response, context)
 
-def generate_response(prompt):
+def generate_response(prompt, TTSEngine):
         current_dateTime = datetime.now()
         current_dateTime_str = current_dateTime.strftime(" (%Y-%m-%d %H:%M:%S)") # Convert the datetime object to a string in a specific format 
         user_prompt = ({"role": "user", "content": prompt + current_dateTime_str}) # Store the users speech prompt in the context and the timestamp
         add_item_to_list(user_prompt, context) # ensure the list is not at full capacity
         stream = TextToAudioStream(TTSEngine).feed(chatbot(context[-MAX_Memory:])) # prompt the ai and play the prompt using text to speech
-        stream.play_async() # play the text to speech in a seprate thread 
+        stream.play_async(fast_sentence_fragment=True, buffer_threshold_seconds=999, minimum_sentence_length=18,) # play the text to speech in a seprate thread 
         print("\nPress '.' to stop the audio playback And not save the result!")
         print("Press ''' to stop the audio playback and save the result!")
         print("Press '/' to pause the audio playback!")
