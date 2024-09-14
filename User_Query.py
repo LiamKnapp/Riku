@@ -24,7 +24,7 @@ def Get_Speech():
     user_input = ""
     while True:
         audio = pyaudio.PyAudio()
-        stream = audio.open(rate=16000, format=pyaudio.paInt16, channels=1, input=True, frames_per_buffer=512)
+        stream = audio.open(rate=16000, format=pyaudio.paInt16, channels=1, input=True, frames_per_buffer=512, input_device_index=1)
         audio_buffer = collections.deque(maxlen=int((16000 // 512) * 0.5))
         frames, voice_activity_detected = [], False
 

@@ -20,3 +20,4 @@ faster_whisper
 numpy
 torch
 RealtimeTTS
+ultralytics

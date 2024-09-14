@@ -16,7 +16,7 @@ from ImageBot import stablediffusion
 # Alpha 2.0
 #TODO Ai plays Osu!
 #TODO Ai plays D&D
-#TODO Ai plays Diffuse the bomb (Keep Talking and Nobody Explodes)
+#TODO Ai plays Diffuse the bomb (Keep Talking and Nobody .Explodes)
 #TODO Ai gets computer vision
 
 
@@ -47,6 +47,6 @@ def main():
 if __name__ == '__main__':
     from RealtimeTTS import CoquiEngine
     logging.basicConfig(level=logging.INFO)    
-    engine = CoquiEngine(voice="./models/v2.0.2/snoop_dogg.wav", level=logging.INFO, speed=1.15)
+    engine = CoquiEngine(voice="./models/v2.0.2/snoop_dogg.wav", level=logging.WARNING, speed=1.25)
     ai.restore_context()
-    main(),
+    main()

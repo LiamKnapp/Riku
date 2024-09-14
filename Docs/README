@@ -1,3 +1,4 @@
+NEEDED TO RUN:
 Install ollama
 Install the llama3 model ( in cmd after ollama is installed >ollama run llama3)
 Using the ModelFile construct your own "Riku" Ai see the ollama git repo to learn the commands
@@ -10,13 +11,17 @@ cuDNN 8 for CUDA 11
 Install ffmpeg for text to speech: https://www.youtube.com/watch?v=jZLqNocSQDM
 The SystemEngine works out of the box using your system's built-in TTS capabilities. No additional setup is needed.
 
-If using Vtube studio avatar, install vtubestudio and configure it enableing api
-Use the VTS Desktop Audio application and configure it so that the animations in vtubestudio work well
-If you are trying to have the output of the AI's voice to not be your default device so that you can prevent noise for vtube studio so the mouth is accurate. Use a virtual audio cable such as VB-Audio. For extra configurations of audio devices use the software Voicemeeter.
-
 Install the required libraries and packages
-
 To run the code use: python app.py
+
+FOR YOLOv10:
+https://youtu.be/D2HKry0k7uU?si=aFrNV2p3S_t2HiVy
+
+FOR THE VIRTUAL BODY:
+If using Vtube studio avatar, install vtubestudio and configure it enableing api. vtubestudio can be installed on steam.
+Download and run the VTS Desktop Audio application and configure it so that the animations in vtubestudio are more acurate.
+Once complete, Configure the avatar on vtubestudio by changing the "Mouth Open" Configuration. Select the Input button and scroll until you find the option DesktopAudioVolume, select this option. The avatar should now be configured to use the desktop audio for automated mouth movements as long as VTS Desktop Audio is open and running.
+If you are trying to have the output of the AI's voice to not be your default device so that you can prevent other noise. Use a virtual audio cable such as VB-Audio and for extra configurations of audio devices use the software Voicemeeter. Then configure the default device settings on ffmpeg and the various dependecies, this can be done in windows audio settings on your system.
 
 References:
 https://github.com/SYSTRAN/faster-whisper

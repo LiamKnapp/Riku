@@ -6,6 +6,7 @@ MAX_Memory = 1000 # specify the limit of the short term memory capacity
 context = [] # Saves the response of the users speech and the ais responses
 context_file_path = "./Chatbot/llm_ShortTermMemory.json"
 AiModel = "llama3" # Define the Ai model to be used
+#AiModel = "Riku" # Define the Ai model to be used
 
 # Function to save context to a JSON file
 def save_context_to_json(context):
